@@ -18,13 +18,10 @@ class Graph:
     def addEdge(self, u, v):
         self.graph[u].append(v)
 
-    '''A recursive function to print all paths from 'u' to 'd'.
+    '''A function to print all paths from 'u' to 'd'.
     visited[] keeps track of vertices in current path.
     path[] stores actual vertices and path_index is current
     index in path[]'''
-
-
-
 
 
     def printAllPathsUtil(self, u, d, visited, path):
@@ -62,7 +59,7 @@ class Graph:
 
 
 # Create a graph given in the above diagram
-g = Graph(25)
+g = Graph(43)
 g.addEdge(0,1)
 g.addEdge(0,2)
 g.addEdge(1,3)
@@ -103,8 +100,36 @@ g.addEdge(14, 18)
 g.addEdge(18, 21)
 g.addEdge(21, 23)
 g.addEdge(23, 24)
+g.addEdge(24, 25)
+g.addEdge(24, 26)
+g.addEdge(25, 27)
+g.addEdge(26, 27)
+g.addEdge(27, 28)
+g.addEdge(27, 29)
+g.addEdge(28, 30)
+g.addEdge(28, 31)
+g.addEdge(30, 33)
+g.addEdge(30, 34)
+g.addEdge(33, 37)
+g.addEdge(29, 31)
+g.addEdge(29, 32)
+g.addEdge(31, 34)
+g.addEdge(31, 35)
+g.addEdge(34, 37)
+g.addEdge(34, 38)
+g.addEdge(37, 40)
+g.addEdge(32, 35)
+g.addEdge(32, 36)
+g.addEdge(35, 38)
+g.addEdge(35, 39)
+g.addEdge(38, 40)
+g.addEdge(38, 41)
+g.addEdge(40, 42)
+g.addEdge(36, 39)
+g.addEdge(39, 41)
+g.addEdge(41, 42)
 
 s = 0
-d = 24
+d = 42
 print("Following are all different paths from % d to % d :" % (s, d))
 g.printAllPaths(s, d)
