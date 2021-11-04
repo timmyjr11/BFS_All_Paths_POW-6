@@ -108,3 +108,4 @@ s = 0
 d = 24
 print("Following are all different paths from % d to % d :" % (s, d))
 g.printAllPaths(s, d)
+p
