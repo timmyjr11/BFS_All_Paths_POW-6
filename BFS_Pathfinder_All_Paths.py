@@ -1,11 +1,8 @@
-# Python program to print all paths from a source to destination.
 
 from collections import defaultdict
 
-# This class represents a directed graph
-# using adjacency list representation
+# Creates a class that creates a graph for the algorithm to use
 class Graph:
-
 
     def __init__(self, vertices):
         # No. of vertices
@@ -14,15 +11,9 @@ class Graph:
         # default dictionary to store graph
         self.graph = defaultdict(list)
 
-    # function to add an edge to graph
+    # function to add an edge/point to graph
     def addEdge(self, u, v):
         self.graph[u].append(v)
-
-    '''A function to print all paths from 'u' to 'd'.
-    visited[] keeps track of vertices in current path.
-    path[] stores actual vertices and path_index is current
-    index in path[]'''
-
 
     def printAllPathsUtil(self, u, d, visited, path):
 
